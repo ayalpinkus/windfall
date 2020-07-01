@@ -1,0 +1,323 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Draft//EN">
+<html>
+  <head>
+<meta charset="iso-8859-1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="-1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Windfall by Barbara Avon</title>
+<meta name='description'   content='Win a free signed copy!'>
+<meta property='og:title'  content='Win a free signed copy!'>
+<meta name='twitter:title' content='Win a free signed copy!'>
+
+<meta property='og:description'  content='Signed copy of the book Windfall included in surprise prize package!'>
+<meta name='twitter:description' content='Signed copy of the book Windfall included in surprise prize package!'>
+
+<meta property='og:image' content='https://ayalpinkus.github.io/windfall/windfall-cover-twitter.png?v=3'>
+<meta name='twitter:image' content='https://ayalpinkus.github.io/windfall/windfall-cover-twitter.png?v=3'>
+
+<meta property='og:url' content='https://ayalpinkus.github.io/windfall/index.html'>
+<meta property='og:site_name' content='Barbara Avon'>
+
+<meta name='twitter:card' content='summary_large_image'>
+<meta name='twitter:image:alt' content='Windfall by Barbara Avon.'>
+<meta name='twitter:site' content='@barb_avon'>
+
+<style type="text/css">
+body
+{
+  font-size:12pt;
+  color:#ffffff;
+  background:#740000;
+}
+
+.mid-column
+{
+  width:8in;
+}
+
+.ticket
+{
+  display:table;
+  color:#ff3925; /*#c32424;*/
+  background:#ffd7d1; /*#d1b0ab;*/
+}
+
+.ticket-row
+{
+  display:table-row;
+}
+
+.tcell
+{
+  display:table-cell;
+  vertical-align:middle;
+}
+
+.num
+{
+  font-size:18pt;
+  font-family:sans;
+  font-weight:900;
+  border: 2px solid #ff3925; /*#c32424; */
+  margin:0.05in;
+  padding:0.025in;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.selected
+{
+  background:url("data:image/svg+xml;utf8,<svg xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' version='1.1' ><path d='M0,0 l100,100 M100,0 l-100,100' style='fill:none; stroke:%236060ff; stroke-width:7; ' /></svg>");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: default;
+}
+
+
+@media screen and (max-width: 8in) {
+  .mid-column {
+    width:100%;
+  }
+  .num {
+    font-size:12pt;
+    border: 2px solid #ff3925;
+    margin:0.05in;
+    padding:0.05in;
+  }
+
+}
+
+
+</style>
+
+
+<script>
+var prevonload=window.onload;
+window.onload=onload_lottery;
+function onload_lottery()
+{
+  if (prevonload != null)
+  {
+    prevonload();
+  }
+  var element;
+  element=document.getElementById('num1');
+  if (element) element.value = 1+Math.floor(Math.random()*98);
+  element=document.getElementById('num2');
+  if (element) element.value = 1+Math.floor(Math.random()*98);
+  element=document.getElementById('num3');
+  if (element) element.value = 1+Math.floor(Math.random()*98);
+  changeUrl();
+}
+
+function clamp(number)
+{
+  if (number<1) return 1;
+  if (number>99) return 99;
+  return number;  
+}
+
+var selectedNumbers="";
+var nrSelected=0;
+
+function clicked(element)
+{
+  if (element.className.indexOf("selected")<0)
+  {
+    element.classList.add("selected");
+    selectedNumbers = selectedNumbers + element.innerHTML;
+    nrSelected++;
+    if (nrSelected == 1)
+    {
+      selectedNumbers = selectedNumbers + ", ";
+    }
+    else if (nrSelected == 2)
+    {
+      selectedNumbers = selectedNumbers + ", and ";
+    }
+    else if (nrSelected == 3)
+    {
+      selectedNumbers = selectedNumbers + ".";
+
+      setTimeout(function(){ 
+	alert("Excellent! You chose the numbers "+selectedNumbers+" Please tweet your choice on the next page to enter Barbara Avon's \"lottery\" to win a surprise prize package that includes a signed copy of Windfall!");
+	var text="I participated in @barb_avon's Windfall \"lottery\" #WindfallBarbaraAvon and chose the numbers "+selectedNumbers+" https://ayalpinkus.github.io/windfall/index.html?v=1"; 
+	text=escape(text);
+	document.location.replace("https://twitter.com/intent/tweet?text="+text); 
+      }, 100);
+    }
+//    alert("Clicked "+element.innerHTML);
+  }
+}
+
+</script>
+  </head>
+  <body>
+<center>
+<div class='mid-column'>
+  <h1>Do you have what it takes to catch a &ldquo;Windfall&rdquo;?</h1>
+  <h3>Win a surprise prize package that includes a signed copy of Barbara's latest book Windfall!</h3>
+<img width='30%' src='windfall-cover.jpg' />
+
+  <h1>Pick three numbers, tweet your choice to win!</h1>
+  <p>
+
+
+<div class='ticket'>
+
+<div class='ticket-row'>
+<div class='tcell'><div class='num' onclick='clicked(this)'>1</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>2</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>3</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>4</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>5</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>6</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>7</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>8</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>9</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>10</div></div>
+</div>
+
+<div class='ticket-row'>
+<div class='tcell'><div class='num' onclick='clicked(this)'>11</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>12</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>13</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>14</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>15</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>16</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>17</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>18</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>19</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>20</div></div>
+</div>
+
+<div class='ticket-row'>
+<div class='tcell'><div class='num' onclick='clicked(this)'>21</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>22</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>23</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>24</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>25</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>26</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>27</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>28</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>29</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>30</div></div>
+</div>
+
+<div class='ticket-row'>
+<div class='tcell'><div class='num' onclick='clicked(this)'>31</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>32</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>33</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>34</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>35</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>36</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>37</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>38</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>39</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>40</div></div>
+</div>
+
+<div class='ticket-row'>
+<div class='tcell'><div class='num' onclick='clicked(this)'>41</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>42</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>43</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>44</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>45</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>46</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>47</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>48</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>49</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>50</div></div>
+</div>
+
+<div class='ticket-row'>
+<div class='tcell'><div class='num' onclick='clicked(this)'>51</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>52</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>53</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>54</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>55</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>56</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>57</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>58</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>59</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>60</div></div>
+</div>
+
+<div class='ticket-row'>
+<div class='tcell'><div class='num' onclick='clicked(this)'>61</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>62</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>63</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>64</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>65</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>66</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>67</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>68</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>69</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>70</div></div>
+</div>
+
+<div class='ticket-row'>
+<div class='tcell'><div class='num' onclick='clicked(this)'>71</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>72</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>73</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>74</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>75</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>76</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>77</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>78</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>79</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>80</div></div>
+</div>
+
+<div class='ticket-row'>
+<div class='tcell'><div class='num' onclick='clicked(this)'>81</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>82</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>83</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>84</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>85</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>86</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>87</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>88</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>89</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>90</div></div>
+</div>
+
+<div class='ticket-row'>
+<div class='tcell'><div class='num' onclick='clicked(this)'>91</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>92</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>93</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>94</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>95</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>96</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>97</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>98</div></div>
+<div class='tcell'><div class='num' onclick='clicked(this)'>99</div></div>
+<div class='tcell'> </div>
+</div>
+
+
+</div>
+
+<P></p>
+This is not a real lottery &mdash; it costs nothing to participate. This is just a fun attempt at promoting a book.
+<P></p>
+Everyone can enter once. Please don't enter from multiple different accounts either.
+<P></p>
+Twitter does not sponsor or endorse this Sponsor or this &ldquo;lottery&rdquo;. This promotion is in no way sponsored, endorsed or administered by, or associated with Twitter. You understand that you are providing your information to the Sponsor and not to Twitter. By participating via the Twitter platform, participants are also subject to Twitter's privacy policy and terms of use, which can be found at www.twitter.com/privacy and https://twitter.com/tos.
+<p style='height:1in'></p>
+
+</div>
+</center>
+  </body>
+<html>
